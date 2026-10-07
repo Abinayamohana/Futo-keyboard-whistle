@@ -1,36 +1,34 @@
 package org.futo.voiceinput.shared.whisper
 
 import android.content.Context
-import org.futo.voiceinput.shared.ggml.WhisperGGML
 import org.futo.voiceinput.shared.types.ModelLoader
-
+import org.futo.voiceinput.shared.whistle.Whistle
 
 class ModelManager(
     val context: Context
 ) {
-    private val loadedModels: HashMap<Any, WhisperGGML> = hashMapOf()
+    private val loadedWhistleModels: HashMap<Any, Whistle> = hashMapOf()
 
-    fun obtainModel(model: ModelLoader): WhisperGGML {
+    fun obtainWhistleModel(model: ModelLoader): Whistle {
         val key = model.key(context)
-        if (!loadedModels.contains(key)) {
-            loadedModels[key] = model.loadGGML(context)
+        if (!loadedWhistleModels.contains(key)) {
+            loadedWhistleModels[key] = model.loadWhistle(context)
         }
 
-        return loadedModels[key]!!
+        return loadedWhistleModels[key]!!
     }
 
     fun cancelAll() {
-        loadedModels.forEach {
+        loadedWhistleModels.forEach {
             it.value.cancel()
         }
     }
 
     suspend fun cleanUp() {
-        for (model in loadedModels.entries) {
+        for (model in loadedWhistleModels.entries) {
             model.value.cancel()
             model.value.close()
         }
-
-        loadedModels.clear()
+        loadedWhistleModels.clear()
     }
 }

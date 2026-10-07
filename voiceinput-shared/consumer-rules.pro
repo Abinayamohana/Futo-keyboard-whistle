@@ -1,1 +1,1 @@
--keep class org.futo.voiceinput.shared.ggml.WhisperGGML
+-keep class org.futo.voiceinput.shared.whistle.Whistle

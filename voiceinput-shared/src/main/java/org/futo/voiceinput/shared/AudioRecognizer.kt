@@ -29,8 +29,8 @@ import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.yield
-import org.futo.voiceinput.shared.ggml.InferenceCancelledException
-import org.futo.voiceinput.shared.ggml.InvalidModelException
+import org.futo.voiceinput.shared.whistle.InferenceCancelledException
+import org.futo.voiceinput.shared.whistle.InvalidModelException
 import org.futo.voiceinput.shared.types.AudioRecognizerListener
 import org.futo.voiceinput.shared.types.InferenceState
 import org.futo.voiceinput.shared.types.Language

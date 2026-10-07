@@ -21,10 +21,10 @@ val ThirdPartyList: List<ThirdPartyItem> = listOf(
         License.Apache2
     ),
     TP(
-        "OpenAI Whisper",
-        "Voice Input powered by OpenAI Whisper",
-        "https://github.com/openai/whisper",
-        "Copyright (c) 2022 OpenAI",
+        "Cactus Compute Whistle & Needle",
+        "Voice Input powered by Whistle model on Needle engine",
+        "https://cactuscompute.com",
+        "Copyright (c) 2024 Cactus Compute",
         License.Apache2
     ),
     TP(

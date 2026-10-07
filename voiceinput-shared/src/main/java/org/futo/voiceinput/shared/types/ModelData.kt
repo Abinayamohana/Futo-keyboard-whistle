@@ -2,13 +2,12 @@ package org.futo.voiceinput.shared.types
 
 import android.content.Context
 import androidx.annotation.StringRes
-import org.futo.voiceinput.shared.ggml.WhisperGGML
+import org.futo.voiceinput.shared.whistle.Whistle
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
 import java.nio.MappedByteBuffer
 import java.nio.channels.FileChannel
-
 
 // Taken from https://github.com/tensorflow/tflite-support/blob/483c45d002cbed57d219fae1676a4d62b28fba73/tensorflow_lite_support/java/src/java/org/tensorflow/lite/support/common/FileUtil.java#L158
 /**
@@ -21,17 +20,28 @@ import java.nio.channels.FileChannel
  */
 @Throws(IOException::class)
 private fun loadMappedFile(context: Context, filePath: String): MappedByteBuffer {
-    context.assets.openFd(filePath).use { fileDescriptor ->
-        FileInputStream(fileDescriptor.fileDescriptor).use { inputStream ->
-            val fileChannel = inputStream.channel
-            val startOffset = fileDescriptor.startOffset
-            val declaredLength = fileDescriptor.declaredLength
-            return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength)
+    return try {
+        context.assets.openFd(filePath).use { fileDescriptor ->
+            FileInputStream(fileDescriptor.fileDescriptor).use { inputStream ->
+                val fileChannel = inputStream.channel
+                val startOffset = fileDescriptor.startOffset
+                val declaredLength = fileDescriptor.declaredLength
+                fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength)
+            }
         }
+    } catch (e: IOException) {
+        val cacheFile = File(context.cacheDir, "extracted_${filePath.replace('/', '_')}")
+        if (!cacheFile.exists() || cacheFile.length() == 0L) {
+            context.assets.open(filePath).use { input ->
+                cacheFile.outputStream().use { output ->
+                    input.copyTo(output)
+                }
+            }
+        }
+        tryOpenDownloadedModel(cacheFile)
     }
 }
 
-// Maybe add `val languages: Set<Language>`
 interface ModelLoader {
     @get:StringRes
     val name: Int
@@ -39,14 +49,14 @@ interface ModelLoader {
     fun exists(context: Context): Boolean
     fun getRequiredDownloadList(context: Context): List<String>
 
-    fun loadGGML(context: Context): WhisperGGML
+    fun loadWhistle(context: Context): Whistle
 
     fun key(context: Context): Any
 }
 
 internal class ModelBuiltInAsset(
     override val name: Int,
-    val ggmlFile: String
+    val modelFile: String
 ) : ModelLoader {
     override fun exists(context: Context): Boolean {
         return true
@@ -56,13 +66,13 @@ internal class ModelBuiltInAsset(
         return listOf()
     }
 
-    override fun loadGGML(context: Context): WhisperGGML {
-        val file = loadMappedFile(context, ggmlFile)
-        return WhisperGGML(file)
+    override fun loadWhistle(context: Context): Whistle {
+        val file = loadMappedFile(context, modelFile)
+        return Whistle(file)
     }
 
     override fun key(context: Context): Any {
-        return "BuiltIn$ggmlFile"
+        return "BuiltIn$modelFile"
     }
 }
 
@@ -84,7 +94,7 @@ private fun Context.tryOpenDownloadedModel(pathStr: String): MappedByteBuffer {
 
 internal class ModelDownloadable(
     override val name: Int,
-    val ggmlFile: String,
+    val modelFile: String,
     val checksum: String
 ) : ModelLoader {
     override fun exists(context: Context): Boolean {
@@ -92,18 +102,18 @@ internal class ModelDownloadable(
     }
 
     override fun getRequiredDownloadList(context: Context): List<String> {
-        return listOf(ggmlFile).filter {
+        return listOf(modelFile).filter {
             !File(context.filesDir, it).exists()
         }
     }
 
-    override fun loadGGML(context: Context): WhisperGGML {
-        val file = context.tryOpenDownloadedModel(ggmlFile)
-        return WhisperGGML(file)
+    override fun loadWhistle(context: Context): Whistle {
+        val file = context.tryOpenDownloadedModel(modelFile)
+        return Whistle(file)
     }
 
     override fun key(context: Context): Any {
-        return "Downloadable$ggmlFile$checksum"
+        return "Downloadable$modelFile$checksum"
     }
 }
 
@@ -119,9 +129,9 @@ public class ModelFileFile(
         return listOf()
     }
 
-    override fun loadGGML(context: Context): WhisperGGML {
+    override fun loadWhistle(context: Context): Whistle {
         val file = tryOpenDownloadedModel(file)
-        return WhisperGGML(file)
+        return Whistle(file)
     }
 
     override fun key(context: Context): Any {

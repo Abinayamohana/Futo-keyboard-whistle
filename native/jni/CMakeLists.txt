@@ -81,10 +81,25 @@ endif()
 if(NOT EXT_BUILD)
     add_library(jni_latinime SHARED ${LATIN_IME_JNI_SRC_FILES})
 
-    target_include_directories(jni_latinime PRIVATE ${LATIN_IME_JNI_INCLUDE})
+    target_include_directories(jni_latinime PRIVATE
+            ${LATIN_IME_JNI_INCLUDE}
+            ${CMAKE_CURRENT_SOURCE_DIR}/needle/include)
 
-    target_link_libraries(jni_latinime
-            jni_latinime_common_static
-            log
-            dl)
+    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/needle/libs/${ANDROID_ABI}/libneedle.a)
+        add_library(needle_static STATIC IMPORTED)
+        set_target_properties(needle_static PROPERTIES IMPORTED_LOCATION
+                ${CMAKE_CURRENT_SOURCE_DIR}/needle/libs/${ANDROID_ABI}/libneedle.a)
+        target_link_libraries(jni_latinime
+                jni_latinime_common_static
+                needle_static
+                log
+                dl
+                m)
+    else()
+        target_link_libraries(jni_latinime
+                jni_latinime_common_static
+                log
+                dl
+                m)
+    endif()
 endif()

@@ -1,0 +1,2260 @@
+kotlin version: 2.1.0
+error message: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't transform method node:
+deserialize (Lkotlinx/serialization/encoding/Decoder;)Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonTheme;:
+  @Lorg/jetbrains/annotations/NotNull;() // invisible
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+   L0
+    ALOAD 1
+    LDC "decoder"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
+   L1
+    LINENUMBER 148 L1
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonTheme$$serializer.descriptor : Lkotlinx/serialization/descriptors/SerialDescriptor;
+    ASTORE 2
+    ICONST_1
+    ISTORE 3
+    ICONST_0
+    ISTORE 4
+    ICONST_0
+    ISTORE 5
+    ICONST_0
+    ISTORE 6
+    ICONST_0
+    ISTORE 7
+    ACONST_NULL
+    ASTORE 8
+    ACONST_NULL
+    ASTORE 9
+    ACONST_NULL
+    ASTORE 10
+    ACONST_NULL
+    ASTORE 11
+    ACONST_NULL
+    ASTORE 12
+    ACONST_NULL
+    ASTORE 13
+    ACONST_NULL
+    ASTORE 14
+    ACONST_NULL
+    ASTORE 15
+    ACONST_NULL
+    ASTORE 16
+    ACONST_NULL
+    ASTORE 17
+    ACONST_NULL
+    ASTORE 18
+    ACONST_NULL
+    ASTORE 19
+    ACONST_NULL
+    ASTORE 20
+    ACONST_NULL
+    ASTORE 21
+    ACONST_NULL
+    ASTORE 22
+    ACONST_NULL
+    ASTORE 23
+    ACONST_NULL
+    ASTORE 24
+    ACONST_NULL
+    ASTORE 25
+    ACONST_NULL
+    ASTORE 26
+    ACONST_NULL
+    ASTORE 27
+    ACONST_NULL
+    ASTORE 28
+    ACONST_NULL
+    ASTORE 29
+    ACONST_NULL
+    ASTORE 30
+    ACONST_NULL
+    ASTORE 31
+    ACONST_NULL
+    ASTORE 32
+    ACONST_NULL
+    ASTORE 33
+    ACONST_NULL
+    ASTORE 34
+    ACONST_NULL
+    ASTORE 35
+    ACONST_NULL
+    ASTORE 36
+    ACONST_NULL
+    ASTORE 37
+    ACONST_NULL
+    ASTORE 38
+    ACONST_NULL
+    ASTORE 39
+    ACONST_NULL
+    ASTORE 40
+    ACONST_NULL
+    ASTORE 41
+    ACONST_NULL
+    ASTORE 42
+    ACONST_NULL
+    ASTORE 43
+    ACONST_NULL
+    ASTORE 44
+    ACONST_NULL
+    ASTORE 45
+    ACONST_NULL
+    ASTORE 46
+    ACONST_NULL
+    ASTORE 47
+    ACONST_NULL
+    ASTORE 48
+    ACONST_NULL
+    ASTORE 49
+    ACONST_NULL
+    ASTORE 50
+    ACONST_NULL
+    ASTORE 51
+    ACONST_NULL
+    ASTORE 52
+    ACONST_NULL
+    ASTORE 53
+    ACONST_NULL
+    ASTORE 54
+    ICONST_0
+    ISTORE 55
+    ACONST_NULL
+    ASTORE 56
+    ACONST_NULL
+    ASTORE 57
+    ACONST_NULL
+    ASTORE 58
+    FCONST_0
+    FSTORE 59
+    ACONST_NULL
+    ASTORE 60
+    FCONST_0
+    FSTORE 61
+    ACONST_NULL
+    ASTORE 62
+    FCONST_0
+    FSTORE 63
+    ICONST_0
+    ISTORE 64
+    ACONST_NULL
+    ASTORE 65
+    ACONST_NULL
+    ASTORE 66
+    ACONST_NULL
+    ASTORE 67
+    ACONST_NULL
+    ASTORE 68
+    ACONST_NULL
+    ASTORE 69
+    ACONST_NULL
+    ASTORE 70
+    ACONST_NULL
+    ASTORE 71
+    ALOAD 1
+    ALOAD 2
+    INVOKEINTERFACE kotlinx/serialization/encoding/Decoder.beginStructure (Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/encoding/CompositeDecoder; (itf)
+    ASTORE 72
+    INVOKESTATIC org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonTheme.access$get$childSerializers$cp ()[Lkotlinx/serialization/KSerializer;
+    ASTORE 73
+    ALOAD 72
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSequentially ()Z (itf)
+    IFEQ L2
+    ALOAD 72
+    ALOAD 2
+    ICONST_0
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 8
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 8
+    ILOAD 5
+    ICONST_1
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    ICONST_1
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 9
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 9
+    ILOAD 5
+    ICONST_2
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    ICONST_2
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 10
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 10
+    ILOAD 5
+    ICONST_4
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    ICONST_3
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 11
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 11
+    ILOAD 5
+    BIPUSH 8
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    ICONST_4
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 12
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 12
+    ILOAD 5
+    BIPUSH 16
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    ICONST_5
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 13
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 13
+    ILOAD 5
+    BIPUSH 32
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 6
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 14
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 14
+    ILOAD 5
+    BIPUSH 64
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 7
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 15
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 15
+    ILOAD 5
+    SIPUSH 128
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 8
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 16
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 16
+    ILOAD 5
+    SIPUSH 256
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 9
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 17
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 17
+    ILOAD 5
+    SIPUSH 512
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 10
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 18
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 18
+    ILOAD 5
+    SIPUSH 1024
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 11
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 19
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 19
+    ILOAD 5
+    SIPUSH 2048
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 12
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 20
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 20
+    ILOAD 5
+    SIPUSH 4096
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 13
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 21
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 21
+    ILOAD 5
+    SIPUSH 8192
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 14
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 22
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 22
+    ILOAD 5
+    SIPUSH 16384
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 15
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 23
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 23
+    ILOAD 5
+    LDC 32768
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 16
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 24
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 24
+    ILOAD 5
+    LDC 65536
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 17
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 25
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 25
+    ILOAD 5
+    LDC 131072
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 18
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 26
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 26
+    ILOAD 5
+    LDC 262144
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 19
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 27
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 27
+    ILOAD 5
+    LDC 524288
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 20
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 28
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 28
+    ILOAD 5
+    LDC 1048576
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 21
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 29
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 29
+    ILOAD 5
+    LDC 2097152
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 22
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 30
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 30
+    ILOAD 5
+    LDC 4194304
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 23
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 31
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 31
+    ILOAD 5
+    LDC 8388608
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 24
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 32
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 32
+    ILOAD 5
+    LDC 16777216
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 25
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 33
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 33
+    ILOAD 5
+    LDC 33554432
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 26
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 34
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 34
+    ILOAD 5
+    LDC 67108864
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 27
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 35
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 35
+    ILOAD 5
+    LDC 134217728
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 28
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 36
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 36
+    ILOAD 5
+    LDC 268435456
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 29
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 37
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 37
+    ILOAD 5
+    LDC 536870912
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 30
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 38
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 38
+    ILOAD 5
+    LDC 1073741824
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 31
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 39
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 39
+    ILOAD 5
+    LDC -2147483648
+    IOR
+    ISTORE 5
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 32
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 40
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 40
+    ILOAD 6
+    ICONST_1
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 33
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 41
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 41
+    ILOAD 6
+    ICONST_2
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 34
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 42
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 42
+    ILOAD 6
+    ICONST_4
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 35
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 43
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 43
+    ILOAD 6
+    BIPUSH 8
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 36
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 44
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 44
+    ILOAD 6
+    BIPUSH 16
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 37
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 45
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 45
+    ILOAD 6
+    BIPUSH 32
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 38
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 46
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 46
+    ILOAD 6
+    BIPUSH 64
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 39
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 47
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 47
+    ILOAD 6
+    SIPUSH 128
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 40
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 48
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 48
+    ILOAD 6
+    SIPUSH 256
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 41
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 49
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 49
+    ILOAD 6
+    SIPUSH 512
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 42
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 50
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 50
+    ILOAD 6
+    SIPUSH 1024
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 43
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 51
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 51
+    ILOAD 6
+    SIPUSH 2048
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 44
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 52
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 52
+    ILOAD 6
+    SIPUSH 4096
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 45
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 53
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 53
+    ILOAD 6
+    SIPUSH 8192
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 46
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 54
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 54
+    ILOAD 6
+    SIPUSH 16384
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 47
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeBooleanElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z (itf)
+    ISTORE 55
+    ILOAD 6
+    LDC 32768
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 48
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 56
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 56
+    ILOAD 6
+    LDC 65536
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 49
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 57
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 57
+    ILOAD 6
+    LDC 131072
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 50
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 58
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 58
+    ILOAD 6
+    LDC 262144
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 51
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeFloatElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)F (itf)
+    FSTORE 59
+    ILOAD 6
+    LDC 524288
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 52
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 60
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 60
+    ILOAD 6
+    LDC 1048576
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 53
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeFloatElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)F (itf)
+    FSTORE 61
+    ILOAD 6
+    LDC 2097152
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 54
+    ALOAD 73
+    BIPUSH 54
+    AALOAD
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 62
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/util/List
+    ASTORE 62
+    ILOAD 6
+    LDC 4194304
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 55
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeFloatElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)F (itf)
+    FSTORE 63
+    ILOAD 6
+    LDC 8388608
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 56
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeBooleanElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z (itf)
+    ISTORE 64
+    ILOAD 6
+    LDC 16777216
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 57
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 65
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 65
+    ILOAD 6
+    LDC 33554432
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 58
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 66
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 66
+    ILOAD 6
+    LDC 67108864
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 59
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 67
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 67
+    ILOAD 6
+    LDC 134217728
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 60
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 68
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 68
+    ILOAD 6
+    LDC 268435456
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 61
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 69
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 69
+    ILOAD 6
+    LDC 536870912
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 62
+    ALOAD 73
+    BIPUSH 62
+    AALOAD
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 70
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/util/Map
+    ASTORE 70
+    ILOAD 6
+    LDC 1073741824
+    IOR
+    ISTORE 6
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 63
+    ALOAD 73
+    BIPUSH 63
+    AALOAD
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 71
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/util/Map
+    ASTORE 71
+    ILOAD 6
+    LDC -2147483648
+    IOR
+    ISTORE 6
+    GOTO L3
+   L2
+   L4
+    ILOAD 3
+    IFEQ L5
+    ALOAD 72
+    ALOAD 2
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeElementIndex (Lkotlinx/serialization/descriptors/SerialDescriptor;)I (itf)
+    ISTORE 4
+    ILOAD 4
+    TABLESWITCH
+      -1: L6
+      0: L7
+      1: L8
+      2: L9
+      3: L10
+      4: L11
+      5: L12
+      6: L13
+      7: L14
+      8: L15
+      9: L16
+      10: L17
+      11: L18
+      12: L19
+      13: L20
+      14: L21
+      15: L22
+      16: L23
+      17: L24
+      18: L25
+      19: L26
+      20: L27
+      21: L28
+      22: L29
+      23: L30
+      24: L31
+      25: L32
+      26: L33
+      27: L34
+      28: L35
+      29: L36
+      30: L37
+      31: L38
+      32: L39
+      33: L40
+      34: L41
+      35: L42
+      36: L43
+      37: L44
+      38: L45
+      39: L46
+      40: L47
+      41: L48
+      42: L49
+      43: L50
+      44: L51
+      45: L52
+      46: L53
+      47: L54
+      48: L55
+      49: L56
+      50: L57
+      51: L58
+      52: L59
+      53: L60
+      54: L61
+      55: L62
+      56: L63
+      57: L64
+      58: L65
+      59: L66
+      60: L67
+      61: L68
+      62: L69
+      63: L70
+      default: L71
+   L6
+    ICONST_0
+    ISTORE 3
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L7
+    ALOAD 72
+    ALOAD 2
+    ICONST_0
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 8
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 8
+    ILOAD 5
+    ICONST_1
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L8
+    ALOAD 72
+    ALOAD 2
+    ICONST_1
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 9
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 9
+    ILOAD 5
+    ICONST_2
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L9
+    ALOAD 72
+    ALOAD 2
+    ICONST_2
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 10
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 10
+    ILOAD 5
+    ICONST_4
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L10
+    ALOAD 72
+    ALOAD 2
+    ICONST_3
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 11
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 11
+    ILOAD 5
+    BIPUSH 8
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L11
+    ALOAD 72
+    ALOAD 2
+    ICONST_4
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 12
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 12
+    ILOAD 5
+    BIPUSH 16
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L12
+    ALOAD 72
+    ALOAD 2
+    ICONST_5
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 13
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 13
+    ILOAD 5
+    BIPUSH 32
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L13
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 6
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 14
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 14
+    ILOAD 5
+    BIPUSH 64
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L14
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 7
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 15
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 15
+    ILOAD 5
+    SIPUSH 128
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L15
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 8
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 16
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 16
+    ILOAD 5
+    SIPUSH 256
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L16
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 9
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 17
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 17
+    ILOAD 5
+    SIPUSH 512
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L17
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 10
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 18
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 18
+    ILOAD 5
+    SIPUSH 1024
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L18
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 11
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 19
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 19
+    ILOAD 5
+    SIPUSH 2048
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L19
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 12
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 20
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 20
+    ILOAD 5
+    SIPUSH 4096
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L20
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 13
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 21
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 21
+    ILOAD 5
+    SIPUSH 8192
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L21
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 14
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 22
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 22
+    ILOAD 5
+    SIPUSH 16384
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L22
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 15
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 23
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 23
+    ILOAD 5
+    LDC 32768
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L23
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 16
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 24
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 24
+    ILOAD 5
+    LDC 65536
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L24
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 17
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 25
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 25
+    ILOAD 5
+    LDC 131072
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L25
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 18
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 26
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 26
+    ILOAD 5
+    LDC 262144
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L26
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 19
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 27
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 27
+    ILOAD 5
+    LDC 524288
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L27
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 20
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 28
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 28
+    ILOAD 5
+    LDC 1048576
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L28
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 21
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 29
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 29
+    ILOAD 5
+    LDC 2097152
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L29
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 22
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 30
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 30
+    ILOAD 5
+    LDC 4194304
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L30
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 23
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 31
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 31
+    ILOAD 5
+    LDC 8388608
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L31
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 24
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 32
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 32
+    ILOAD 5
+    LDC 16777216
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L32
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 25
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 33
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 33
+    ILOAD 5
+    LDC 33554432
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L33
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 26
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 34
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 34
+    ILOAD 5
+    LDC 67108864
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L34
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 27
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 35
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 35
+    ILOAD 5
+    LDC 134217728
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L35
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 28
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 36
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 36
+    ILOAD 5
+    LDC 268435456
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L36
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 29
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 37
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 37
+    ILOAD 5
+    LDC 536870912
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L37
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 30
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 38
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 38
+    ILOAD 5
+    LDC 1073741824
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L38
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 31
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 39
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 39
+    ILOAD 5
+    LDC -2147483648
+    IOR
+    ISTORE 5
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L39
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 32
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 40
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 40
+    ILOAD 6
+    ICONST_1
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L40
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 33
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 41
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 41
+    ILOAD 6
+    ICONST_2
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L41
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 34
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 42
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 42
+    ILOAD 6
+    ICONST_4
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L42
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 35
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 43
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 43
+    ILOAD 6
+    BIPUSH 8
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L43
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 36
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 44
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 44
+    ILOAD 6
+    BIPUSH 16
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L44
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 37
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 45
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 45
+    ILOAD 6
+    BIPUSH 32
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L45
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 38
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 46
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 46
+    ILOAD 6
+    BIPUSH 64
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L46
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 39
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 47
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 47
+    ILOAD 6
+    SIPUSH 128
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L47
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 40
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 48
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 48
+    ILOAD 6
+    SIPUSH 256
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L48
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 41
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 49
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 49
+    ILOAD 6
+    SIPUSH 512
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L49
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 42
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 50
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 50
+    ILOAD 6
+    SIPUSH 1024
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L50
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 43
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 51
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 51
+    ILOAD 6
+    SIPUSH 2048
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L51
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 44
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 52
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 52
+    ILOAD 6
+    SIPUSH 4096
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L52
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 45
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 53
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 53
+    ILOAD 6
+    SIPUSH 8192
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L53
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 46
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 54
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 54
+    ILOAD 6
+    SIPUSH 16384
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L54
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 47
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeBooleanElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z (itf)
+    ISTORE 55
+    ILOAD 6
+    LDC 32768
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L55
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 48
+    GETSTATIC org/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer.INSTANCE : Lorg/futo/inputmethod/latin/uix/theme/serialization/ColorAsStringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 56
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor
+    ASTORE 56
+    ILOAD 6
+    LDC 65536
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L56
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 49
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 57
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 57
+    ILOAD 6
+    LDC 131072
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L57
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 50
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 58
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 58
+    ILOAD 6
+    LDC 262144
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L58
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 51
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeFloatElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)F (itf)
+    FSTORE 59
+    ILOAD 6
+    LDC 524288
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L59
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 52
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 60
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 60
+    ILOAD 6
+    LDC 1048576
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L60
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 53
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeFloatElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)F (itf)
+    FSTORE 61
+    ILOAD 6
+    LDC 2097152
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L61
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 54
+    ALOAD 73
+    BIPUSH 54
+    AALOAD
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 62
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/util/List
+    ASTORE 62
+    ILOAD 6
+    LDC 4194304
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L62
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 55
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeFloatElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)F (itf)
+    FSTORE 63
+    ILOAD 6
+    LDC 8388608
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L63
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 56
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeBooleanElement (Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z (itf)
+    ISTORE 64
+    ILOAD 6
+    LDC 16777216
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L64
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 57
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 65
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 65
+    ILOAD 6
+    LDC 33554432
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L65
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 58
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 66
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 66
+    ILOAD 6
+    LDC 67108864
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L66
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 59
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 67
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 67
+    ILOAD 6
+    LDC 134217728
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L67
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 60
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 68
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 68
+    ILOAD 6
+    LDC 268435456
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L68
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 61
+    GETSTATIC kotlinx/serialization/internal/StringSerializer.INSTANCE : Lkotlinx/serialization/internal/StringSerializer;
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 69
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeNullableSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/lang/String
+    ASTORE 69
+    ILOAD 6
+    LDC 536870912
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L69
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 62
+    ALOAD 73
+    BIPUSH 62
+    AALOAD
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 70
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/util/Map
+    ASTORE 70
+    ILOAD 6
+    LDC 1073741824
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L70
+    ALOAD 72
+    ALOAD 2
+    BIPUSH 63
+    ALOAD 73
+    BIPUSH 63
+    AALOAD
+    CHECKCAST kotlinx/serialization/DeserializationStrategy
+    ALOAD 71
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.decodeSerializableElement (Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/DeserializationStrategy;Ljava/lang/Object;)Ljava/lang/Object; (itf)
+    CHECKCAST java/util/Map
+    ASTORE 71
+    ILOAD 6
+    LDC -2147483648
+    IOR
+    ISTORE 6
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    GOTO L72
+   L71
+    NEW kotlinx/serialization/UnknownFieldException
+    DUP
+    ILOAD 4
+    INVOKESPECIAL kotlinx/serialization/UnknownFieldException.<init> (I)V
+    ATHROW
+   L72
+    POP
+    GOTO L4
+   L5
+   L3
+    ALOAD 72
+    ALOAD 2
+    INVOKEINTERFACE kotlinx/serialization/encoding/CompositeDecoder.endStructure (Lkotlinx/serialization/descriptors/SerialDescriptor;)V (itf)
+    NEW org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonTheme
+    DUP
+    ILOAD 5
+    ILOAD 6
+    ILOAD 7
+    ALOAD 8
+    ALOAD 9
+    ALOAD 10
+    ALOAD 11
+    ALOAD 12
+    ALOAD 13
+    ALOAD 14
+    ALOAD 15
+    ALOAD 16
+    ALOAD 17
+    ALOAD 18
+    ALOAD 19
+    ALOAD 20
+    ALOAD 21
+    ALOAD 22
+    ALOAD 23
+    ALOAD 24
+    ALOAD 25
+    ALOAD 26
+    ALOAD 27
+    ALOAD 28
+    ALOAD 29
+    ALOAD 30
+    ALOAD 31
+    ALOAD 32
+    ALOAD 33
+    ALOAD 34
+    ALOAD 35
+    ALOAD 36
+    ALOAD 37
+    ALOAD 38
+    ALOAD 39
+    ALOAD 40
+    ALOAD 41
+    ALOAD 42
+    ALOAD 43
+    ALOAD 44
+    ALOAD 45
+    ALOAD 46
+    ALOAD 47
+    ALOAD 48
+    ALOAD 49
+    ALOAD 50
+    ALOAD 51
+    ALOAD 52
+    ALOAD 53
+    ALOAD 54
+    ILOAD 55
+    ALOAD 56
+    ALOAD 57
+    ALOAD 58
+    FLOAD 59
+    ALOAD 60
+    FLOAD 61
+    ALOAD 62
+    FLOAD 63
+    ILOAD 64
+    ALOAD 65
+    ALOAD 66
+    ALOAD 67
+    ALOAD 68
+    ALOAD 69
+    ALOAD 70
+    ALOAD 71
+    ACONST_NULL
+    INVOKESPECIAL org/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonTheme.<init> (IIILorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;ZLorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonColor;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;FLjava/util/List;FZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+    ARETURN
+   L73
+    LOCALVARIABLE this Lorg/futo/inputmethod/latin/uix/theme/serialization/SerializableJsonTheme$$serializer; L0 L73 0
+    LOCALVARIABLE decoder Lkotlinx/serialization/encoding/Decoder; L0 L73 1
+    MAXSTACK = 70
+    MAXLOCALS = 74
+
+File is unknown
+The root cause java.lang.OutOfMemoryError was thrown at: org.jetbrains.kotlin.codegen.optimization.temporaryVals.TemporaryValsAnalyzer$StoreTrackingInterpreter.merge(TemporaryVals.kt:207)
+	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.kt:89)
+	at org.jetbrains.org.objectweb.asm.MethodVisitor.visitEnd(MethodVisitor.java:783)
+	at org.jetbrains.org.objectweb.asm.tree.MethodNode.accept(MethodNode.java:772)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:454)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:169)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:182)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:52)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:42)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:28)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.generateModuleInFrontendIRMode(JvmIrCodegenFactory.kt:433)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.generateCodeFromIr(jvmCompilerPipeline.kt:192)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.runBackend(jvmCompilerPipeline.kt:80)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileModule(jvmCompilerPipelineLightTree.kt:264)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileSingleModuleUsingFrontendIrAndLightTree(jvmCompilerPipelineLightTree.kt:231)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipelineLightTree.kt:86)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:146)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:102)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.exec(CLICompiler.kt:316)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileNonIncrementally(IncrementalCompilerRunner.kt:301)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:129)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:674)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:91)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1659)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at org.jetbrains.kotlin.codegen.optimization.temporaryVals.TemporaryValsAnalyzer$StoreTrackingInterpreter.merge(TemporaryVals.kt:207)
+	at org.jetbrains.kotlin.codegen.optimization.temporaryVals.TemporaryValsAnalyzer$StoreTrackingInterpreter.merge(TemporaryVals.kt:159)
+	at org.jetbrains.org.objectweb.asm.tree.analysis.Frame.merge(Frame.java:668)
+	at org.jetbrains.kotlin.codegen.optimization.common.FastAnalyzer.fullMergeControlFlowEdge(FastAnalyzer.kt:241)
+	at org.jetbrains.kotlin.codegen.optimization.common.FastAnalyzer.mergeControlFlowEdge(FastAnalyzer.kt:216)
+	at org.jetbrains.kotlin.codegen.optimization.common.FastAnalyzer.processControlFlowEdge(FastAnalyzer.kt:208)
+	at org.jetbrains.kotlin.codegen.optimization.common.FastAnalyzer.processControlFlowEdge$default(FastAnalyzer.kt:206)
+	at org.jetbrains.kotlin.codegen.optimization.common.FastAnalyzer.visitTableSwitchInsnNode(FastAnalyzer.kt:303)
+	at org.jetbrains.kotlin.codegen.optimization.common.FastAnalyzer.visitMeaningfulInstruction(FastAnalyzer.kt:279)
+	at org.jetbrains.kotlin.codegen.optimization.common.FastAnalyzer.analyzeInstruction(FastAnalyzer.kt:113)
+	at org.jetbrains.kotlin.codegen.optimization.common.FastAnalyzer.analyzeMainLoop(FastAnalyzer.kt:74)
+	at org.jetbrains.kotlin.codegen.optimization.common.FastAnalyzer.analyze(FastAnalyzer.kt:53)
+	at org.jetbrains.kotlin.codegen.optimization.temporaryVals.TemporaryValsAnalyzer.analyze(TemporaryVals.kt:107)
+	at org.jetbrains.kotlin.codegen.optimization.temporaryVals.TemporaryVariablesEliminationTransformer.transform(TemporaryVariablesEliminationTransformer.kt:39)
+	at org.jetbrains.kotlin.codegen.optimization.transformer.CompositeMethodTransformer.transform(CompositeMethodTransformer.kt:25)
+	at org.jetbrains.kotlin.codegen.optimization.OptimizationMethodVisitor.performTransformations(OptimizationMethodVisitor.kt:74)
+	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.kt:67)
+	at org.jetbrains.org.objectweb.asm.MethodVisitor.visitEnd(MethodVisitor.java:783)
+	at org.jetbrains.org.objectweb.asm.tree.MethodNode.accept(MethodNode.java:772)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:454)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:169)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:182)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt$$Lambda$183/0x0000008001143430.invoke(Unknown Source)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:52)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:42)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:28)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+
+

@@ -1,0 +1,567 @@
+kotlin version: 2.1.0
+error message: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
+File being compiled: /Users/spritle/AndroidStudioProjects/keyboard/latinime/java/src/org/futo/inputmethod/latin/uix/UixManager.kt
+The root cause java.lang.RuntimeException was thrown at: org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:55)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:42)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:28)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.generateModuleInFrontendIRMode(JvmIrCodegenFactory.kt:433)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.generateCodeFromIr(jvmCompilerPipeline.kt:192)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.runBackend(jvmCompilerPipeline.kt:80)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileModule(jvmCompilerPipelineLightTree.kt:264)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileSingleModuleUsingFrontendIrAndLightTree(jvmCompilerPipelineLightTree.kt:231)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipelineLightTree.kt:86)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:146)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:102)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.exec(CLICompiler.kt:316)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileNonIncrementally(IncrementalCompilerRunner.kt:301)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:129)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:674)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:91)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1659)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN name:MainKeyboardViewWithActionBar visibility:private modality:FINAL <> ($this:org.futo.inputmethod.latin.uix.UixManager, needToUseExpandableSuggestionUi:kotlin.Boolean, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int) returnType:kotlin.Unit
+  annotations:
+    Composable
+    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+  $this: VALUE_PARAMETER name:<this> type:org.futo.inputmethod.latin.uix.UixManager
+  VALUE_PARAMETER name:needToUseExpandableSuggestionUi index:0 type:kotlin.Boolean
+  VALUE_PARAMETER name:$composer index:1 type:androidx.compose.runtime.Composer? [assignable]
+  VALUE_PARAMETER name:$changed index:2 type:kotlin.Int
+  BLOCK_BODY
+    BLOCK type=kotlin.Unit origin=null
+      SET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Unit origin=null
+        CALL 'public abstract fun startRestartGroup (key: kotlin.Int): androidx.compose.runtime.Composer declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.Composer origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+          key: CONST Int type=kotlin.Int value=-1536484989
+      CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+        sourceInformation: CONST String type=kotlin.String value="C(MainKeyboardViewWithActionBar)695@25991L7,697@26029L39,699@26078L2093:UixManager.kt#plpbh9"
+    VAR name:$dirty type:kotlin.Int [val]
+      GET_VAR '$changed: kotlin.Int declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Int origin=null
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=6
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changed (value: kotlin.Boolean): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+                  value: GET_VAR 'needToUseExpandableSuggestionUi: kotlin.Boolean declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Boolean origin=null
+                then: CONST Int type=kotlin.Int value=4
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=2
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=48
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+                  value: GET_VAR '<this>: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                then: CONST Int type=kotlin.Int value=32
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=16
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+              arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Int origin=null
+                other: CONST Int type=kotlin.Int value=19
+              arg1: CONST Int type=kotlin.Int value=18
+          arg1: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public abstract fun <get-skipping> (): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+              $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+        then: BLOCK type=kotlin.Unit origin=null
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventStart (key: kotlin.Int, dirty1: kotlin.Int, dirty2: kotlin.Int, info: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                key: CONST Int type=kotlin.Int value=-1536484989
+                dirty1: GET_VAR 'val $dirty: kotlin.Int [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Int origin=null
+                dirty2: CONST Int type=kotlin.Int value=-1
+                info: CONST String type=kotlin.String value="org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar (UixManager.kt:694)"
+          VAR name:view type:android.view.View [val]
+            CALL 'public final fun <get-current> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): T of androidx.compose.runtime.CompositionLocal [inline] declared in androidx.compose.runtime.CompositionLocal' type=android.view.View origin=GET_PROPERTY
+              $this: TYPE_OP type=androidx.compose.runtime.CompositionLocal<T of androidx.compose.runtime.CompositionLocal> origin=IMPLICIT_CAST typeOperand=androidx.compose.runtime.CompositionLocal<T of androidx.compose.runtime.CompositionLocal>
+                CALL 'public final fun <get-LocalView> (): androidx.compose.runtime.ProvidableCompositionLocal<android.view.View> declared in androidx.compose.ui.platform.AndroidCompositionLocals_androidKt' type=androidx.compose.runtime.ProvidableCompositionLocal<android.view.View> origin=GET_PROPERTY
+              $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+              $changed: CONST Int type=kotlin.Int value=0
+          VAR name:actionBarShown type:org.futo.inputmethod.latin.uix.settings.DataStoreItem<kotlin.Boolean> [val]
+            CALL 'public final fun useDataStore <T> (key: org.futo.inputmethod.latin.uix.SettingsKey<T of org.futo.inputmethod.latin.uix.settings.HooksKt.useDataStore>, blocking: kotlin.Boolean, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): org.futo.inputmethod.latin.uix.settings.DataStoreItem<T of org.futo.inputmethod.latin.uix.settings.HooksKt.useDataStore> declared in org.futo.inputmethod.latin.uix.settings.HooksKt' type=org.futo.inputmethod.latin.uix.settings.DataStoreItem<kotlin.Boolean> origin=null
+              <T>: kotlin.Boolean
+              key: CALL 'public final fun <get-ActionBarDisplayedSetting> (): org.futo.inputmethod.latin.uix.SettingsKey<kotlin.Boolean> declared in org.futo.inputmethod.latin.uix.settings.pages.TypingKt' type=org.futo.inputmethod.latin.uix.SettingsKey<kotlin.Boolean> origin=GET_PROPERTY
+              blocking: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
+                CONST Boolean type=kotlin.Boolean value=false
+              $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+              $changed: CONST Int type=kotlin.Int value=0
+              $default: CONST Int type=kotlin.Int value=2
+          CALL 'public final fun Column (modifier: androidx.compose.ui.Modifier?, verticalArrangement: androidx.compose.foundation.layout.Arrangement.Vertical?, horizontalAlignment: androidx.compose.ui.Alignment.Horizontal?, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout.ColumnKt' type=kotlin.Unit origin=null
+            modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            verticalArrangement: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            horizontalAlignment: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            content: BLOCK type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=LAMBDA
+              COMPOSITE type=kotlin.Unit origin=null
+              FUNCTION_REFERENCE 'private final fun MainKeyboardViewWithActionBar$lambda$10 (this$0: org.futo.inputmethod.latin.uix.UixManager, $actionBarShown: org.futo.inputmethod.latin.uix.settings.DataStoreItem<kotlin.Boolean>, $$composer: androidx.compose.runtime.Composer?, $view: android.view.View, $needToUseExpandableSuggestionUi: kotlin.Boolean, $$dirty: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in org.futo.inputmethod.latin.uix.UixManager' type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                this$0: GET_VAR '<this>: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                $actionBarShown: GET_VAR 'val actionBarShown: org.futo.inputmethod.latin.uix.settings.DataStoreItem<kotlin.Boolean> [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=org.futo.inputmethod.latin.uix.settings.DataStoreItem<kotlin.Boolean> origin=null
+                $$composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+                $view: GET_VAR 'val view: android.view.View [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=android.view.View origin=null
+                $needToUseExpandableSuggestionUi: GET_VAR 'needToUseExpandableSuggestionUi: kotlin.Boolean declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Boolean origin=null
+                $$dirty: GET_VAR 'val $dirty: kotlin.Int [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Int origin=null
+            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+            $changed: CONST Int type=kotlin.Int value=0
+            $default: CONST Int type=kotlin.Int value=7
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventEnd (): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+      BRANCH
+        if: CONST Boolean type=kotlin.Boolean value=true
+        then: CALL 'public abstract fun skipToGroupEnd (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+    BLOCK type=kotlin.Unit origin=null
+      BLOCK type=kotlin.Unit origin=FOLDED_SAFE_CALL
+        WHEN type=kotlin.Unit origin=FOLDED_SAFE_CALL
+          BRANCH
+            if: COMPOSITE type=kotlin.Boolean origin=null
+              VAR IR_TEMPORARY_VARIABLE name:tmp1_safe_receiver type:androidx.compose.runtime.ScopeUpdateScope? [val]
+                CALL 'public abstract fun endRestartGroup (): androidx.compose.runtime.ScopeUpdateScope? declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.Composer? origin=null
+              CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: GET_VAR 'val tmp1_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  arg1: CONST Null type=kotlin.Nothing? value=null
+            then: CALL 'public abstract fun updateScope (block: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>): kotlin.Unit declared in androidx.compose.runtime.ScopeUpdateScope' type=kotlin.Unit origin=null
+              $this: GET_VAR 'val tmp1_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+              block: BLOCK type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=LAMBDA
+                COMPOSITE type=kotlin.Unit origin=null
+                CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                  <T>: kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit>
+                  dynamicCall: CALL 'public final fun invoke (p0: org.futo.inputmethod.latin.uix.UixManager, p1: kotlin.Boolean, p2: kotlin.Int): kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> declared in kotlin.jvm.internal.invokeDynamic' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                    p0: GET_VAR '<this>: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                    p1: GET_VAR 'needToUseExpandableSuggestionUi: kotlin.Boolean declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Boolean origin=null
+                    p2: GET_VAR '$changed: kotlin.Int declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar' type=kotlin.Int origin=null
+                  bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                    tag: CONST Int type=kotlin.Int value=6
+                    owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+                    name: CONST String type=kotlin.String value="metafactory"
+                    descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+                    isInterface: CONST Boolean type=kotlin.Boolean value=false
+                  bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Any
+                    RAW_FUNCTION_REFERENCE 'private final fun MainKeyboardViewWithActionBar$lambda$11 ($tmp0_rcvr: org.futo.inputmethod.latin.uix.UixManager, $needToUseExpandableSuggestionUi: kotlin.Boolean, $$changed: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $force: kotlin.Int): kotlin.Unit? declared in org.futo.inputmethod.latin.uix.UixManager' type=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: androidx.compose.runtime.Composer?, p2: kotlin.Int?): kotlin.Unit? [fake_override,operator] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+          BRANCH
+            if: CONST Boolean type=kotlin.Boolean value=true
+            then: CONST Null type=kotlin.Any? value=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:41)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:407)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:424)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:169)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:52)
+	... 47 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN INLINE_LAMBDA name:MainKeyboardViewWithActionBar$lambda$10 visibility:private modality:FINAL <> ($receiver:androidx.compose.foundation.layout.ColumnScope, this$0:org.futo.inputmethod.latin.uix.UixManager, $actionBarShown:org.futo.inputmethod.latin.uix.settings.DataStoreItem<kotlin.Boolean>, $$composer:androidx.compose.runtime.Composer?, $view:android.view.View, $needToUseExpandableSuggestionUi:kotlin.Boolean, $$dirty:kotlin.Int, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int) returnType:kotlin.Unit
+  annotations:
+    Composable
+    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+  $receiver: VALUE_PARAMETER name:$this$Column type:androidx.compose.foundation.layout.ColumnScope
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:this$0 index:0 type:org.futo.inputmethod.latin.uix.UixManager
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$actionBarShown index:1 type:org.futo.inputmethod.latin.uix.settings.DataStoreItem<kotlin.Boolean>
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$$composer index:2 type:androidx.compose.runtime.Composer?
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$view index:3 type:android.view.View
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$needToUseExpandableSuggestionUi index:4 type:kotlin.Boolean
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$$dirty index:5 type:kotlin.Int
+  VALUE_PARAMETER name:$composer index:6 type:androidx.compose.runtime.Composer? [assignable]
+  VALUE_PARAMETER name:$changed index:7 type:kotlin.Int
+  BLOCK_BODY
+    VAR name:$i$a$-Column-UixManager$MainKeyboardViewWithActionBar$1 type:kotlin.Int [val]
+      CONST Int type=kotlin.Int value=0
+    BLOCK type=kotlin.Unit origin=null
+      CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+        key: CONST Int type=kotlin.Int value=680287234
+        sourceInformation: CONST String type=kotlin.String value="C:UixManager.kt#plpbh9"
+      COMPOSITE type=kotlin.Unit origin=null
+        VAR name:suggestedWordsOrNull type:org.futo.inputmethod.latin.SuggestedWords? [val]
+          WHEN type=org.futo.inputmethod.latin.SuggestedWords? origin=IF
+            BRANCH
+              if: CALL 'public abstract fun <get-value> (): T of androidx.compose.runtime.MutableState declared in androidx.compose.runtime.MutableState' type=kotlin.Boolean origin=GET_PROPERTY
+                $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:shouldShowSuggestionStrip type:androidx.compose.runtime.MutableState<kotlin.Boolean> visibility:private [final]' type=androidx.compose.runtime.MutableState<kotlin.Boolean> origin=null
+                  receiver: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+              then: BLOCK type=org.futo.inputmethod.latin.SuggestedWords? origin=null
+                CALL 'public abstract fun <get-value> (): T of androidx.compose.runtime.MutableState declared in androidx.compose.runtime.MutableState' type=org.futo.inputmethod.latin.SuggestedWords? origin=GET_PROPERTY
+                  $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:suggestedWords type:androidx.compose.runtime.MutableState<org.futo.inputmethod.latin.SuggestedWords?> visibility:private [final]' type=androidx.compose.runtime.MutableState<org.futo.inputmethod.latin.SuggestedWords?> origin=null
+                    receiver: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+            BRANCH
+              if: CONST Boolean type=kotlin.Boolean value=true
+              then: BLOCK type=kotlin.Nothing? origin=null
+                CONST Null type=kotlin.Nothing? value=null
+        VAR name:inlineSuggestions type:kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>> [val]
+          CALL 'public final fun run <T, R> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.run, R of kotlin.StandardKt.run>): R of kotlin.StandardKt.run [inline] declared in kotlin.StandardKt' type=kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>> origin=null
+            <T>: androidx.compose.foundation.layout.ColumnScope
+            <R>: kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>>
+            $receiver: GET_VAR '$this$Column: androidx.compose.foundation.layout.ColumnScope declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.foundation.layout.ColumnScope origin=null
+            block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.foundation.layout.ColumnScope, kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>>> origin=LAMBDA
+              COMPOSITE type=kotlin.Unit origin=null
+              FUNCTION_REFERENCE 'private final fun MainKeyboardViewWithActionBar$lambda$10$lambda$0 (this$0: org.futo.inputmethod.latin.uix.UixManager): kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>> declared in org.futo.inputmethod.latin.uix.UixManager' type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.foundation.layout.ColumnScope, kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>>> origin=INLINE_LAMBDA reflectionTarget=null
+                this$0: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+        BLOCK type=kotlin.Unit origin=null
+          COMPOSITE type=kotlin.Unit origin=null
+            BLOCK type=kotlin.Unit origin=null
+              CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                key: CONST Int type=kotlin.Int value=-393687265
+              CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                sourceInformation: CONST String type=kotlin.String value="742@28115L14,716@26769L256,723@27070L356,735@27669L27,740@27945L31,712@26572L1575"
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                arg0: CALL 'public final fun <get-value> (): T of org.futo.inputmethod.latin.uix.settings.DataStoreItem declared in org.futo.inputmethod.latin.uix.settings.DataStoreItem' type=kotlin.Boolean origin=GET_PROPERTY
+                  $this: GET_VAR '$actionBarShown: org.futo.inputmethod.latin.uix.settings.DataStoreItem<kotlin.Boolean> declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.settings.DataStoreItem<kotlin.Boolean> origin=null
+                arg1: CALL 'public final fun isNotEmpty <T> (): kotlin.Boolean [inline] declared in kotlin.collections.CollectionsKt' type=kotlin.Boolean origin=null
+                  <T>: androidx.compose.runtime.MutableState<android.view.View?>
+                  $receiver: GET_VAR 'val inlineSuggestions: kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>> [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>> origin=null
+              then: BLOCK type=kotlin.Unit origin=null
+                BLOCK type=kotlin.Unit origin=ARGUMENTS_REORDERING_FOR_CALL
+                  VAR IR_TEMPORARY_VARIABLE name:tmp0_suggestionStripListener type:org.futo.inputmethod.latin.uix.UixManager.<no name provided> [val]
+                    GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:suggestionStripListener type:org.futo.inputmethod.latin.uix.UixManager.<no name provided> visibility:private [final]' type=org.futo.inputmethod.latin.uix.UixManager.<no name provided> origin=null
+                      receiver: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                  VAR IR_TEMPORARY_VARIABLE name:tmp1_importantNotice type:org.futo.inputmethod.latin.uix.ImportantNotice? [val]
+                    CALL 'public abstract fun <get-value> (): T of androidx.compose.runtime.MutableState declared in androidx.compose.runtime.MutableState' type=org.futo.inputmethod.latin.uix.ImportantNotice? origin=GET_PROPERTY
+                      $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:currentNotice type:androidx.compose.runtime.MutableState<org.futo.inputmethod.latin.uix.ImportantNotice?> visibility:private' type=androidx.compose.runtime.MutableState<org.futo.inputmethod.latin.uix.ImportantNotice?> origin=null
+                        receiver: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                  VAR IR_TEMPORARY_VARIABLE name:tmp2_keyboardManagerForAction type:org.futo.inputmethod.latin.uix.UixActionKeyboardManager [val]
+                    GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:keyboardManagerForAction type:org.futo.inputmethod.latin.uix.UixActionKeyboardManager visibility:private [final]' type=org.futo.inputmethod.latin.uix.UixActionKeyboardManager origin=null
+                      receiver: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                  VAR IR_TEMPORARY_VARIABLE name:tmp3_isActionsExpanded type:kotlin.Boolean [val]
+                    CALL 'public abstract fun <get-value> (): T of androidx.compose.runtime.MutableState declared in androidx.compose.runtime.MutableState' type=kotlin.Boolean origin=GET_PROPERTY
+                      $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:isActionsExpanded type:androidx.compose.runtime.MutableState<kotlin.Boolean> visibility:private' type=androidx.compose.runtime.MutableState<kotlin.Boolean> origin=null
+                        receiver: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                  VAR IR_TEMPORARY_VARIABLE name:tmp4_quickClipState type:org.futo.inputmethod.latin.uix.QuickClipState? [val]
+                    CALL 'public final fun run <T, R> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.run, R of kotlin.StandardKt.run>): R of kotlin.StandardKt.run [inline] declared in kotlin.StandardKt' type=org.futo.inputmethod.latin.uix.QuickClipState? origin=null
+                      <T>: androidx.compose.foundation.layout.ColumnScope
+                      <R>: org.futo.inputmethod.latin.uix.QuickClipState?
+                      $receiver: GET_VAR '$this$Column: androidx.compose.foundation.layout.ColumnScope declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.foundation.layout.ColumnScope origin=null
+                      block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.foundation.layout.ColumnScope, org.futo.inputmethod.latin.uix.QuickClipState?> origin=LAMBDA
+                        COMPOSITE type=kotlin.Unit origin=null
+                        FUNCTION_REFERENCE 'private final fun MainKeyboardViewWithActionBar$lambda$10$lambda$1 (this$0: org.futo.inputmethod.latin.uix.UixManager): org.futo.inputmethod.latin.uix.QuickClipState? declared in org.futo.inputmethod.latin.uix.UixManager' type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.foundation.layout.ColumnScope, org.futo.inputmethod.latin.uix.QuickClipState?> origin=INLINE_LAMBDA reflectionTarget=null
+                          this$0: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                  VAR IR_TEMPORARY_VARIABLE name:tmp5_loading type:kotlin.Boolean [val]
+                    CALL 'public final fun isImeLoading ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Boolean declared in org.futo.inputmethod.engine.IMEManager' type=kotlin.Boolean origin=null
+                      $this: CALL 'public final fun <get-imeManager> (): org.futo.inputmethod.engine.IMEManager declared in org.futo.inputmethod.latin.LatinIME' type=org.futo.inputmethod.engine.IMEManager origin=GET_PROPERTY
+                        $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:latinIME type:org.futo.inputmethod.latin.LatinIME visibility:private [final]' type=org.futo.inputmethod.latin.LatinIME origin=null
+                          receiver: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                      $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                      $changed: CONST Int type=kotlin.Int value=0
+                  CALL 'public final fun ActionBar (words: org.futo.inputmethod.latin.SuggestedWords?, suggestionStripListener: org.futo.inputmethod.latin.suggestions.SuggestionStripViewListener, onActionActivated: kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit>, onActionAltActivated: kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit>, inlineSuggestions: kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>>, isActionsExpanded: kotlin.Boolean, toggleActionsExpanded: kotlin.Function0<kotlin.Unit>, importantNotice: org.futo.inputmethod.latin.uix.ImportantNotice?, keyboardManagerForAction: org.futo.inputmethod.latin.uix.KeyboardManagerForAction?, quickClipState: org.futo.inputmethod.latin.uix.QuickClipState?, onQuickClipDismiss: kotlin.Function0<kotlin.Unit>?, needToUseExpandableSuggestionUi: kotlin.Boolean, loading: kotlin.Boolean, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in org.futo.inputmethod.latin.uix.ActionBarKt' type=kotlin.Unit origin=null
+                    words: GET_VAR 'val suggestedWordsOrNull: org.futo.inputmethod.latin.SuggestedWords? [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.SuggestedWords? origin=null
+                    suggestionStripListener: GET_VAR 'val tmp0_suggestionStripListener: org.futo.inputmethod.latin.uix.UixManager.<no name provided> [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager.<no name provided> origin=null
+                    onActionActivated: BLOCK type=kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> origin=null
+                      BLOCK type=kotlin.Unit origin=null
+                        CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          key: CONST Int type=kotlin.Int value=-393679907
+                        CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                          composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          sourceInformation: CONST String type=kotlin.String value="CC(remember):UixManager.kt#9igjgp"
+                      VAR IR_TEMPORARY_VARIABLE name:tmp0_group type:kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> [val]
+                        CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> origin=null
+                          <T>: kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit>
+                          $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          invalid: CALL 'public final fun or (other: kotlin.Boolean): kotlin.Boolean [infix] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                            $this: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                              $this: GET_VAR '$$composer: androidx.compose.runtime.Composer? declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                              value: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                            other: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                              $this: GET_VAR '$$composer: androidx.compose.runtime.Composer? declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                              value: GET_VAR '$view: android.view.View declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=android.view.View origin=null
+                          block: BLOCK type=kotlin.Function0<kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit>> origin=LAMBDA
+                            COMPOSITE type=kotlin.Unit origin=null
+                            FUNCTION_REFERENCE 'private final fun MainKeyboardViewWithActionBar$lambda$10$lambda$3 (this$0: org.futo.inputmethod.latin.uix.UixManager, $view: android.view.View): kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> declared in org.futo.inputmethod.latin.uix.UixManager' type=kotlin.Function0<kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit>> origin=INLINE_LAMBDA reflectionTarget=null
+                              this$0: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                              $view: GET_VAR '$view: android.view.View declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=android.view.View origin=null
+                      CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                        $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                      GET_VAR 'val tmp0_group: kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> origin=null
+                    onActionAltActivated: BLOCK type=kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> origin=null
+                      BLOCK type=kotlin.Unit origin=null
+                        CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          key: CONST Int type=kotlin.Int value=-393670175
+                        CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                          composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          sourceInformation: CONST String type=kotlin.String value="CC(remember):UixManager.kt#9igjgp"
+                      VAR IR_TEMPORARY_VARIABLE name:tmp1_group type:kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> [val]
+                        CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> origin=null
+                          <T>: kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit>
+                          $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          invalid: CALL 'public final fun or (other: kotlin.Boolean): kotlin.Boolean [infix] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                            $this: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                              $this: GET_VAR '$$composer: androidx.compose.runtime.Composer? declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                              value: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                            other: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                              $this: GET_VAR '$$composer: androidx.compose.runtime.Composer? declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                              value: GET_VAR '$view: android.view.View declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=android.view.View origin=null
+                          block: BLOCK type=kotlin.Function0<kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit>> origin=LAMBDA
+                            COMPOSITE type=kotlin.Unit origin=null
+                            FUNCTION_REFERENCE 'private final fun MainKeyboardViewWithActionBar$lambda$10$lambda$5 (this$0: org.futo.inputmethod.latin.uix.UixManager, $view: android.view.View): kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> declared in org.futo.inputmethod.latin.uix.UixManager' type=kotlin.Function0<kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit>> origin=INLINE_LAMBDA reflectionTarget=null
+                              this$0: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                              $view: GET_VAR '$view: android.view.View declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=android.view.View origin=null
+                      CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                        $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                      GET_VAR 'val tmp1_group: kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.Function1<org.futo.inputmethod.latin.uix.Action, kotlin.Unit> origin=null
+                    inlineSuggestions: GET_VAR 'val inlineSuggestions: kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>> [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.collections.List<androidx.compose.runtime.MutableState<android.view.View?>> origin=null
+                    isActionsExpanded: GET_VAR 'val tmp3_isActionsExpanded: kotlin.Boolean [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.Boolean origin=null
+                    toggleActionsExpanded: BLOCK type=kotlin.Function0<kotlin.Unit> origin=null
+                      BLOCK type=kotlin.Unit origin=null
+                        CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          key: CONST Int type=kotlin.Int value=-393651336
+                        CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                          composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          sourceInformation: CONST String type=kotlin.String value="CC(remember):UixManager.kt#9igjgp"
+                      VAR IR_TEMPORARY_VARIABLE name:tmp2_group type:kotlin.Function0<kotlin.Unit> [val]
+                        CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=kotlin.Function0<kotlin.Unit> origin=null
+                          <T>: kotlin.Function0<kotlin.Unit>
+                          $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          invalid: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                            $this: GET_VAR '$$composer: androidx.compose.runtime.Composer? declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                            value: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                          block: BLOCK type=kotlin.Function0<kotlin.Function0<kotlin.Unit>> origin=LAMBDA
+                            COMPOSITE type=kotlin.Unit origin=null
+                            FUNCTION_REFERENCE 'private final fun MainKeyboardViewWithActionBar$lambda$10$lambda$7 (this$0: org.futo.inputmethod.latin.uix.UixManager): kotlin.Function0<kotlin.Unit> declared in org.futo.inputmethod.latin.uix.UixManager' type=kotlin.Function0<kotlin.Function0<kotlin.Unit>> origin=INLINE_LAMBDA reflectionTarget=null
+                              this$0: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                      CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                        $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                      GET_VAR 'val tmp2_group: kotlin.Function0<kotlin.Unit> [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.Function0<kotlin.Unit> origin=null
+                    importantNotice: GET_VAR 'val tmp1_importantNotice: org.futo.inputmethod.latin.uix.ImportantNotice? [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.ImportantNotice? origin=null
+                    keyboardManagerForAction: GET_VAR 'val tmp2_keyboardManagerForAction: org.futo.inputmethod.latin.uix.UixActionKeyboardManager [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixActionKeyboardManager origin=null
+                    quickClipState: GET_VAR 'val tmp4_quickClipState: org.futo.inputmethod.latin.uix.QuickClipState? [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.QuickClipState? origin=null
+                    onQuickClipDismiss: BLOCK type=kotlin.Function0<kotlin.Unit> origin=null
+                      BLOCK type=kotlin.Unit origin=null
+                        CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          key: CONST Int type=kotlin.Int value=-393642500
+                        CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                          composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          sourceInformation: CONST String type=kotlin.String value="CC(remember):UixManager.kt#9igjgp"
+                      VAR IR_TEMPORARY_VARIABLE name:tmp3_group type:kotlin.Function0<kotlin.Unit> [val]
+                        CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=kotlin.Function0<kotlin.Unit> origin=null
+                          <T>: kotlin.Function0<kotlin.Unit>
+                          $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                          invalid: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                            $this: GET_VAR '$$composer: androidx.compose.runtime.Composer? declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                            value: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                          block: BLOCK type=kotlin.Function0<kotlin.Function0<kotlin.Unit>> origin=LAMBDA
+                            COMPOSITE type=kotlin.Unit origin=null
+                            FUNCTION_REFERENCE 'private final fun MainKeyboardViewWithActionBar$lambda$10$lambda$9 (this$0: org.futo.inputmethod.latin.uix.UixManager): kotlin.Function0<kotlin.Unit> declared in org.futo.inputmethod.latin.uix.UixManager' type=kotlin.Function0<kotlin.Function0<kotlin.Unit>> origin=INLINE_LAMBDA reflectionTarget=null
+                              this$0: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+                      CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                        $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                      GET_VAR 'val tmp3_group: kotlin.Function0<kotlin.Unit> [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.Function0<kotlin.Unit> origin=null
+                    needToUseExpandableSuggestionUi: GET_VAR '$needToUseExpandableSuggestionUi: kotlin.Boolean declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.Boolean origin=null
+                    loading: GET_VAR 'val tmp5_loading: kotlin.Boolean [val] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.Boolean origin=null
+                    $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+                    $changed: CONST Int type=kotlin.Int value=0
+                    $changed1: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                      $this: CONST Int type=kotlin.Int value=112
+                      other: CALL 'public final fun shl (bitCount: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                        $this: GET_VAR '$$dirty: kotlin.Int declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=kotlin.Int origin=null
+                        bitCount: CONST Int type=kotlin.Int value=3
+                    $default: CONST Int type=kotlin.Int value=0
+          COMPOSITE type=kotlin.Unit origin=null
+            CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+              $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+      CALL 'public final fun sourceInformationMarkerEnd (composer: androidx.compose.runtime.Composer): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10' type=androidx.compose.runtime.Composer? origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.generateLambdaBody(IrSourceCompilerForInline.kt:67)
+	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.generateLambdaBody(LambdaInfo.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:100)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:561)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:589)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:1050)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrWhen.accept(IrWhen.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:529)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:236)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:124)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:45)
+	... 57 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN INLINE_LAMBDA name:MainKeyboardViewWithActionBar$lambda$10$lambda$9 visibility:private modality:FINAL <> (this$0:org.futo.inputmethod.latin.uix.UixManager) returnType:kotlin.Function0<kotlin.Unit>
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:this$0 index:0 type:org.futo.inputmethod.latin.uix.UixManager
+  BLOCK_BODY
+    VAR name:$i$a$-cache-UixManager$MainKeyboardViewWithActionBar$1$5 type:kotlin.Int [val]
+      CONST Int type=kotlin.Int value=0
+    RETURN type=kotlin.Nothing from='private final fun MainKeyboardViewWithActionBar$lambda$10$lambda$9 (this$0: org.futo.inputmethod.latin.uix.UixManager): kotlin.Function0<kotlin.Unit> declared in org.futo.inputmethod.latin.uix.UixManager'
+      BLOCK type=kotlin.Function0<kotlin.Unit> origin=LAMBDA
+        COMPOSITE type=kotlin.Unit origin=null
+        CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=kotlin.Function0<kotlin.Unit> origin=null
+          <T>: kotlin.Function0<kotlin.Unit>
+          dynamicCall: CALL 'public final fun invoke (p0: org.futo.inputmethod.latin.uix.UixManager): kotlin.Function0<kotlin.Unit> declared in kotlin.jvm.internal.invokeDynamic' type=kotlin.Function0<kotlin.Unit> origin=null
+            p0: GET_VAR 'this$0: org.futo.inputmethod.latin.uix.UixManager declared in org.futo.inputmethod.latin.uix.UixManager.MainKeyboardViewWithActionBar$lambda$10$lambda$9' type=org.futo.inputmethod.latin.uix.UixManager origin=null
+          bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+            tag: CONST Int type=kotlin.Int value=6
+            owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+            name: CONST String type=kotlin.String value="metafactory"
+            descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+            isInterface: CONST Boolean type=kotlin.Boolean value=false
+          bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+            CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+              method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (): R of kotlin.Function0 [operator] declared in kotlin.Function0' type=kotlin.Any
+            RAW_FUNCTION_REFERENCE 'private final fun MainKeyboardViewWithActionBar$lambda$10$lambda$9$lambda$8 (this$0: org.futo.inputmethod.latin.uix.UixManager): kotlin.Unit? declared in org.futo.inputmethod.latin.uix.UixManager' type=kotlin.Any
+            CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+              method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (): kotlin.Unit? [fake_override,operator] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.generateLambdaBody(IrSourceCompilerForInline.kt:67)
+	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.generateLambdaBody(LambdaInfo.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:100)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:561)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:589)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:735)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.declarations.IrVariable.accept(IrVariable.kt:36)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.gen(ExpressionCodegen.kt:213)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrCallGenerator.genValueAndPut(IrCallGenerator.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:561)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:589)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:1050)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrWhen.accept(IrWhen.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitComposite(IrElementVisitor.kt:129)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitComposite(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitComposite(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrComposite.accept(IrComposite.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:529)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:236)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:124)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:45)
+	... 81 more
+Caused by: java.lang.OutOfMemoryError: GC overhead limit exceeded
+
+

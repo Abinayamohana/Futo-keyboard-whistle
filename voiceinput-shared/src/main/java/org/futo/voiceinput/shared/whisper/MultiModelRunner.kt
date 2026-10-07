@@ -4,9 +4,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
-import org.futo.voiceinput.shared.ggml.BailLanguageException
-import org.futo.voiceinput.shared.ggml.DecodingMode
-import org.futo.voiceinput.shared.ggml.InferenceCancelledException
+import org.futo.voiceinput.shared.whistle.BailLanguageException
+import org.futo.voiceinput.shared.whistle.DecodingMode
+import org.futo.voiceinput.shared.whistle.InferenceCancelledException
 import org.futo.voiceinput.shared.types.InferenceState
 import org.futo.voiceinput.shared.types.Language
 import org.futo.voiceinput.shared.types.ModelInferenceCallback
@@ -33,13 +33,13 @@ class MultiModelRunner(
         val jobs = mutableListOf<Job>()
 
         jobs.add(launch(Dispatchers.Default) {
-            modelManager.obtainModel(runConfiguration.primaryModel)
+            modelManager.obtainWhistleModel(runConfiguration.primaryModel)
         })
 
         if (runConfiguration.languageSpecificModels.count() < 2) {
             runConfiguration.languageSpecificModels.forEach {
                 jobs.add(launch(Dispatchers.Default) {
-                    modelManager.obtainModel(it.value)
+                    modelManager.obtainWhistleModel(it.value)
                 })
             }
         }
@@ -55,7 +55,7 @@ class MultiModelRunner(
         callback: ModelInferenceCallback
     ): String = coroutineScope {
         callback.updateStatus(InferenceState.LoadingModel)
-        val primaryModel = modelManager.obtainModel(runConfiguration.primaryModel)
+        val primaryModel = modelManager.obtainWhistleModel(runConfiguration.primaryModel)
 
         val allowedLanguages = decodingConfiguration.languages.map { it.toWhisperString() }.toTypedArray()
         val bailLanguages = runConfiguration.languageSpecificModels.filter { it.value != runConfiguration.primaryModel }.keys.map { it.toWhisperString() }.toTypedArray()
@@ -84,7 +84,7 @@ class MultiModelRunner(
             val language = getLanguageFromWhisperString(e.language)
 
             val specificModelLoader = runConfiguration.languageSpecificModels[language]!!
-            val specificModel = modelManager.obtainModel(specificModelLoader)
+            val specificModel = modelManager.obtainWhistleModel(specificModelLoader)
 
             specificModel.infer(
                 samples = samples,

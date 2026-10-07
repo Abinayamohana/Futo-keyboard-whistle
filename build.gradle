@@ -205,6 +205,10 @@ android {
         testApplicationId 'org.futo.inputmethod.latin.tests'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = false
+
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
+        }
     }
 
     bundle {
@@ -368,7 +372,7 @@ android {
     }
 
     aaptOptions {
-        noCompress 'dict'
+        noCompress 'dict', 'cact', 'bin'
     }
 
     packagingOptions {

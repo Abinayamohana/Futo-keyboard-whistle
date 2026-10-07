@@ -25,7 +25,7 @@
 #include "org_futo_inputmethod_latin_xlm_LanguageModel.h"
 #include "defines.h"
 #include "org_futo_inputmethod_latin_xlm_AdapterTrainer.h"
-#include "org_futo_voiceinput_WhisperGGML.h"
+#include "org_futo_voiceinput_Whistle.h"
 #include "org_futo_inputmethod_latin_xlm_ModelInfoLoader.h"
 
 /*
@@ -71,8 +71,8 @@ jint JNI_OnLoad(JavaVM *vm, void *reserved) {
         AKLOGE("ERROR: ModelInfoLoader native registration failed");
         return -1;
     }
-    if (!voiceinput::register_WhisperGGML(env)) {
-        AKLOGE("ERROR: WhisperGGML native registration failed");
+    if (!voiceinput::register_Whistle(env)) {
+        AKLOGE("ERROR: Whistle native registration failed");
         return -1;
     }
     /* success -- return valid version number */
